@@ -1,0 +1,24 @@
+.description
+{
+    margin-top: 200px;
+    text-align: center;
+    height: 80vh;
+}
+.map
+{
+    position: relative;
+    text-align: center;
+}
+.map img
+{
+    margin: 0 auto;
+}
+.map button
+{
+    position: absolute;
+    top: 50%;
+}
+
+.solutions{
+   text-align: center;
+}

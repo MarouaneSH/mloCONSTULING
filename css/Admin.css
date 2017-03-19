@@ -1,0 +1,167 @@
+
+.panel , body
+{
+    background-color:#F1F3F6;
+}
+*
+{
+    font-family: 'Open Sans', sans-serif;
+
+}
+.container
+{
+    margin-top: 120px;
+}
+/* top bar */
+.top-bar
+{
+    background: #3E454C;
+   
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    height: 50px;
+    text-align: right;
+    padding-top: 15px;
+}
+.top-bar a
+{
+    color:white;
+    text-decoration: none;
+    margin-right: 30px;
+    margin-top: 30px;
+}
+.panel 
+{
+  
+      background: white;
+      color: black;
+     border: 1px solid #e1e6ef
+   
+}
+.nav-admin
+{
+    background: #2C3136;
+    position: fixed;
+    height: 100vh;
+    padding-top: 20vh;
+    color: white;
+    z-index: 11;
+}
+.nav-admin h5
+{
+    position: absolute;
+    top: 0;
+    text-align: center;
+    width: 100%;
+    left: 0;
+    margin: 0;
+    padding: 17px 0;
+    background: #3E454C;
+    
+}
+ul
+{
+    list-style: none;
+}
+.panel-header
+{
+    background: #19b395;
+       color: white;
+       padding: 10px 20px;        
+       
+}
+
+button
+{
+    color: black;
+    background:white;
+    border:none;
+    padding: 8px;
+}
+
+.panel-msg
+{
+    padding: 10px 20px;
+}
+
+
+
+
+
+
+/* Panel Information*/
+.panel-information
+{
+    background: #19b395;
+    position: fixed;
+    top:20vh;
+    left: 0;
+    right: 0;
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    color:white;
+    border-radius: 5px;
+    display: none;
+    border: solid #2a3f54;
+    max-height: 80vh;
+    overflow-y: auto;
+    z-index:20;
+}
+.panel-information #close-panel
+{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color:white;
+    font-size:40px;
+}
+.panel-information span
+{
+    background: #E0E0E0;
+    padding: 2px 30px;
+    color: black;
+    border-radius: 10px;
+}
+
+
+.panel-information .col-md-9 h5
+{
+    background: #CFD8DC;; padding: 5px 20px;
+    width: 90%;
+    color: black;
+    word-wrap: break-word;
+}
+
+.panel-information button
+{
+        border: none;
+    padding: 8px;
+    position: absolute;
+    top: 5px;
+    right: 13%;
+    background: none;
+}
+
+
+.nav-admin ul li a
+{
+    padding: 20px;
+    background: #3E454C;
+    color: white;
+}
+
+.nav-admin ul li a:hover
+{
+    background: #19B395;
+}
+.nav-admin 
+{
+    padding: 0;
+    padding-top: 150px;
+}
+.active
+{
+    background: #19b395 !important;
+}

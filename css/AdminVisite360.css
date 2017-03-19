@@ -1,0 +1,100 @@
+.row
+{
+    margin-top: 20px;
+}
+button
+{
+    background: #19B395;
+    color: white;
+}
+.loading
+{
+        background: #587073;
+    position: absolute;
+    top: 0;
+    width: 50%;
+    text-align: center;
+    padding: 50px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    border: solid #ad9797 1px;
+    color: white;
+    display: none;
+}
+
+.success
+{
+    
+        background: #587073;
+    position: absolute;
+    top: 0;
+    width: 50%;
+    text-align: center;
+    padding: 50px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    border: solid #ad9797 1px;
+    color: white;
+    display: none;
+}
+a{
+        color: #19b395;
+}
+
+#exit
+{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+.sub-bar
+{
+    position: absolute;
+    background: #19B395;
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+    color: white;
+       
+}
+.sub-bar li
+{
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+     background: #249680;
+     margin-top: 8px;
+     margin-right: 20px;
+}
+#listTour
+{
+    display: none;
+        position: absolute;
+    top: 0;
+    width: 90%;
+
+}
+#search
+{
+    margin: 30px 0;
+}
+#basic-addon1
+{
+    background: #249680;
+    color: white;
+}
+
+.load-data
+{
+        position: absolute;
+    z-index: 10;
+    top: 120px;
+    width: 70%;
+    text-align: center;
+    display: none;
+}

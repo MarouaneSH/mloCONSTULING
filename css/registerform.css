@@ -1,0 +1,303 @@
+*
+{
+   font-family: 'Poppins', sans-serif;
+
+}
+html
+{
+     background: url('../img/2.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+body {
+   
+	height: auto;
+      background:rgba(255,255,255,0.5);
+}
+
+.info
+{
+	text-align: center;
+}
+
+.top-content .text h1 { color: #fff; }
+
+.top-content .description {
+	margin: 20px 0 10px 0;
+}
+
+.top-content .description p { opacity: 0.8;color:black; }
+
+.top-content .description a {
+	color: #fff;
+}
+.top-content .description a:hover, 
+.top-content .description a:focus { border-bottom: 1px dotted #fff; }
+
+.top-content .top-big-link {
+	margin-top: 35px;
+}
+
+.form-top {
+	overflow: hidden;
+	padding: 0 25px 15px 25px;
+	background: #fff;
+	-moz-border-radius: 4px 4px 0 0; -webkit-border-radius: 4px 4px 0 0; border-radius: 4px 4px 0 0;
+	text-align: left;
+}
+
+.form-top-left {
+	float: left;
+	width: 75%;
+	padding-top: 25px;
+}
+
+.form-top-left h3 { margin-top: 0; }
+
+.form-top-right {
+	float: left;
+	width: 25%;
+	padding-top: 5px;
+	font-size: 66px;
+	color: #ddd;
+	line-height: 100px;
+	text-align: right;
+}
+
+.form-bottom {
+	padding: 25px 25px 30px 25px;
+	background: #eee;
+	-moz-border-radius: 0 0 4px 4px; -webkit-border-radius: 0 0 4px 4px; border-radius: 0 0 4px 4px;
+	text-align: left;
+}
+
+.form-bottom form textarea {
+	height: 100px;
+}
+
+.form-bottom form .input-error {
+	border-color: #19b9e7;
+}
+
+
+/***** Media queries *****/
+
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+@media (min-width: 768px) and (max-width: 991px) {}
+
+@media (max-width: 767px) {
+	
+	.navbar { padding-top: 0; }
+	.navbar.navbar-no-bg { background: #333; background: rgba(51, 51, 51, 0.9); }
+	.navbar-brand { height: 60px; margin-left: 15px; }
+	.navbar-collapse { border: 0; }
+	.navbar-toggle { margin-top: 12px; }
+	
+	.inner-bg { padding: 60px 0 110px 0; }
+	.top-content .text { padding-top: 0; padding-bottom: 60px; }
+	.top-content .top-big-link { margin-top: 25px; }
+	.top-content .top-big-link a.btn { margin-top: 10px; }
+	.mlo-consult { display: none;}
+	.form-box
+	{
+		padding: 0;
+		    margin: 60px 0;
+	}
+
+}
+
+@media (max-width: 415px) {
+	
+	h1, h2 { font-size: 32px; }
+
+}
+
+
+/* Retina-ize images/icons */
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+	
+	
+	
+}
+
+
+.form-top-left h4
+{
+	color: #1CB9C8;
+}
+.content
+{
+	
+}
+.container
+{
+       height: auto;
+}
+.content h1{
+	color:rgb(157, 0, 84);
+	font-weight: bold;
+}
+.content .container
+{
+	padding-top: 50px;
+}
+.content .row
+{
+    margin-top: 8%;
+}
+.description p
+{
+    color: black;
+}
+
+.btn-submit
+{
+    background: rgb(157, 0, 84);
+    color: white;
+}
+
+.top-big-link button
+{
+	background: rgb(157, 0, 84);
+	color: white;
+	border:none;
+	padding: 10px;
+}
+
+
+
+.solutions label
+{
+	font-size: 14px;
+	font-weight: 100;
+}
+.activite button
+{
+	background: rgb(157, 0, 84);
+}
+.activite button:hover
+{
+background: rgb(157, 0, 84) !important;
+}
+.activite button:active
+{
+background: rgb(157, 0, 84) !important;
+}
+ .activite .btn-primary.active,   .activite .btn-primary:active
+{
+	background: rgb(157, 0, 84) !important;
+}
+.activite .dropdown-menu
+{
+	background: rgb(157, 0, 84);
+	right: auto;
+}
+
+.dropdown-menu li a:hover
+{
+	background: white;
+}
+
+.mlo-consult 
+{
+	
+	background: rgba(238, 238, 238, 0.31);
+
+	width: 400px;
+	height: 300px;
+	margin-top: 100px;
+	color:white;
+	border-radius: 5px;
+}
+.mlo-consult img
+{
+	margin-top: 40px;
+   width: 50%;
+}
+
+.send-email
+{
+	position: fixed;
+	background: rgb(157, 0, 84);
+	width: 50%;
+	height: 300px;
+	left: 25%;
+	bottom: 180px;
+	text-align: center;
+	padding-top: 50px;
+	border-radius: 10px;
+}
+.send-email p
+{
+	margin-top: 20px;
+	color: white;
+
+}
+.send-email h2
+{
+	color: white;
+}
+.send-email a
+{
+	color:#1CB9C8;
+	font-weight: bold;
+}
+
+h3
+{
+	font-size: 20px;
+}
+
+
+
+
+
+
+
+
+/* BTN UPLOUAD */
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: red;
+    cursor: inherit;
+    display: block;
+}
+
+
+
+.send-email , .loading-msg ,.send-msg ,#errors-msg
+{
+	display: none;
+}
+.send-msg .fa
+{
+	position: absolute;
+	color:white;
+	top:20px;
+	right: 20px;
+	font-size:40px;
+}

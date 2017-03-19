@@ -1,0 +1,209 @@
+*
+{
+   font-family: 'Poppins', sans-serif;
+
+}
+.caption
+{
+    position: absolute;
+    top:270px;
+    right: 0;
+    left: 0;
+    width: 80%;
+    text-align: center;
+        margin: 0 auto;
+        color: white;
+      
+}
+.caption h1
+{
+      font-size: 50px;
+}
+
+
+.desc
+{
+    margin: 50px 0;
+}
+.desc p 
+{
+
+    color: #053f5d;
+
+}
+.desc hr
+{
+    width: 40px;
+    border:solid #1CB9C8 2px;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+
+
+/* Tab services */ 
+
+#tab-services
+{
+    list-style: none;
+    margin-left: -25px;
+}
+#tab-services img
+{
+    width: 30px;
+    margin-right: 40px;
+ 
+  
+}
+
+#tab-services li
+{
+    background: #053f5d;;
+        padding: 20px;
+    margin-top: 10px;
+    color:black;
+  
+   
+}
+#tab-services li .fa
+{
+    color:white;
+    margin-right: 40px;
+ font-size: 25px;
+}
+#tab-services li span
+{
+    border-left: solid 3px white;
+   padding-left: 8px ;
+       color: white;
+   
+}
+  #tab-services li:hover
+{
+  
+   color:white;
+   cursor: pointer;
+   
+}
+ #tab-services li span:hover
+ {
+      color:white;
+ }
+
+.services-info
+{
+    text-align: center;
+}
+
+.services-info button
+{
+    background: #053f5d;
+    border:none;
+    color:white;
+    padding: 8px;
+}
+
+  #tab-services .serv-active
+{
+     background: rgb(29, 186, 192);
+   color:black;
+   cursor: pointer;
+  
+}
+#services2 , #services3
+{
+    display: none;
+}
+.services-info img
+{
+    margin-top: 10px;
+}
+.services-info h2
+{
+margin-bottom: 60px;
+}
+
+blockquote
+{
+    padding: 0 20px;
+}
+
+.btn-devis{
+        background: #053f5d;
+    color: white;
+    padding: 15px 60px;
+    margin-left: 59px;
+    margin-top: 100px;
+
+}
+
+.btn-devis:hover
+{
+    background: rgb(29, 186, 192);
+    color:white;
+}
+
+
+/* Media query */
+ @media screen and (max-width: 770px){
+
+    .bg img
+    {
+        height: 300px !important;
+    }
+    .bg .bg-color
+    {
+        height: 350px !important;
+    }
+    .bg h1
+    {
+        margin-top: 0px !important;
+        font-size: 20px  !important;
+    }
+    .desc p
+    {
+        margin-left:0px !important; 
+    }
+    .desc
+    {
+        margin: 50px 0 !important;
+    }
+    #tab-services{
+        padding: 0 !important;
+    }
+    blockquote
+    {
+            margin-left: 30px !important;
+    }
+    .btn-devis
+    {
+            position: fixed;
+            bottom: 0;
+            z-index: 9999;
+                width: 100%;
+                left: 0;
+                margin: 0;
+                background: rgb(29, 186, 192);
+                border: none;
+                border-top: solid white 2px;
+    }
+
+    .desc hr
+    {
+          margin-left: auto !important;
+          margin-right: auto;
+ 
+    }
+    #tab-services
+    {
+        margin-left: auto;
+    }
+    .nav-services
+    {
+        margin-top: -100px;
+    }
+    .bg p
+    {
+        font-size: 12px !important;
+    }
+ } /* END MEDIA QUERIS*/
