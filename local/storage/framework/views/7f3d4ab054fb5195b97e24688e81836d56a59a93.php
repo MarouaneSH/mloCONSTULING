@@ -2,26 +2,40 @@
 <div class="container col-md-9">
   
     
-    <?php echo e($users); ?>
-
-     <?php $__currentLoopData = json_decode($users,true); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $user): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-       Nom : <?php echo e($user['name']); ?> <br>
-       Prenom : <?php echo e($user['email']); ?> <br>
-    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+    <h3>Listes des utilisateurs inscrit </h3>
     <table class="table">
     <thead>
       <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
+        <th>Nom</th>
         <th>Email</th>
+        <th>Téléphone</th>
+        <th>Date Création</th>
+        <th>Abonnement</th>
+        <th>Date d'abonnement</th>
       </tr>
     </thead>
     <tbody>
         <?php $__currentLoopData = json_decode($users,true); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $user): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <tr <?php if($user['subscribed']=='0'): ?> class="success" <?php else: ?> class="info" <?php endif; ?>>
+            <tr <?php if($user['subscribed']=='1'): ?> class="success" <?php else: ?> class="info" <?php endif; ?>>
                     <td><?php echo e($user['name']); ?></td>
                     <td><?php echo e($user['email']); ?> </td>
-                    <td><?php echo e($user['subscribed']); ?></td>
+                    <td><?php echo e($user['telephone']); ?></td>
+                    <td><?php echo e($user['created_at']); ?></td>
+                    <td>
+                     <?php if($user['subscribed']=='1'): ?>
+                        OUI
+                     <?php else: ?>
+                      NON   
+                     <?php endif; ?>
+                    </td>
+                    <td>
+                     <?php if($user['date_subscription']==null): ?>
+                        ##
+                     <?php else: ?>
+                      <?php echo e($user['date_subscription']); ?>
+
+                     <?php endif; ?>
+                     </td>
             </tr>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </tbody>

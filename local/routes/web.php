@@ -43,8 +43,10 @@ Route::group(["prefix" => "Admin" ,"middleware" => "Admine"],function(){
     Route::get('dashboard/{name}',"AdminController@indexNav")->name('tourdash');
     
     //Api
-    Route::get('Formation',"ApiController@index")->name('formationApi');
-     Route::get('Formation/users',"ApiController@ShowFormationUsers")->name('formation_users');
+    Route::get('Formation',"ApiController@index")->name('FormationApi');
+    Route::get('Formation/users',"ApiController@ShowFormationUsers")->name('formation_users');
+    Route::get('Formation/messages',"ApiController@ShowFormationMessages")->name('formation_messages');
+
 
      //Get Messages
     Route::get('getDemande',"AdminController@getDemande");
