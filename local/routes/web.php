@@ -40,10 +40,15 @@ Route::post("DemandeDevis", "DemandeControler@store");
 Route::group(["prefix" => "Admin" ,"middleware" => "Admine"],function(){
 
     Route::get('dashboard',"AdminController@index")->name('dashboard');
-     Route::get('dashboard/{name}',"AdminController@indexNav")->name('dash');
+    Route::get('dashboard/{name}',"AdminController@indexNav")->name('tourdash');
+    
+    //Api
+    Route::get('Formation',"ApiController@index")->name('formationApi');
+     Route::get('Formation/users',"ApiController@ShowFormationUsers")->name('formation_users');
 
      //Get Messages
     Route::get('getDemande',"AdminController@getDemande");
+    
     Route::get('getDemande/{id}',"AdminController@getDemande");
 
     //Get link visite 360
@@ -125,11 +130,11 @@ Route::group(['prefix' => 'en' , "as" =>"en"], function () {
 
 
 
-//TEST
+// //TEST
 
 
-Route::get("test",function(){
+// Route::get("test",function(){
        
        
-      return  env('APP_STORAGE');
-});
+//       return  env('APP_STORAGE');
+// });

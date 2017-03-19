@@ -22,9 +22,10 @@
         </ul>
        <ul class="nav nav-pills nav-stacked">
             <?php $route = Route::currentRouteName() ?>
+         
             <li><a href="<?php echo e(route('dashboard')); ?>" <?php if($route == 'dashboard'): ?> class="active" <?php endif; ?>>DEMANDES DEVIS</a></li>
-            <li><a href="<?php echo e(route('dash','visite360')); ?>" <?php if($route == 'dash'): ?> class="active" <?php endif; ?>>TOURDASH</a></li>
-            
+            <li><a href="<?php echo e(route('tourdash','visite360')); ?>" <?php if($route == 'tourdash'): ?> class="active" <?php endif; ?>>TOURDASH</a></li>
+             <li><a href="<?php echo e(route('formationApi')); ?>" <?php if(strpos('$route', 'formationApi')): ?> class="active" <?php endif; ?>>Formation</a></li>
         </ul>
     </div>
     <div class="col-md-3"></div>
