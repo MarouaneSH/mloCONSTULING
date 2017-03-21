@@ -19,7 +19,7 @@ class ApiController extends Controller
 
     public function ShowFormationUsers()
     {
-        $data =  file_get_contents('http://localhost:90/api/getUsers?key=MarouaneSH-api');
+        $data =  file_get_contents('http://localhost:8000/api/getUsers?key=MarouaneSH-api');
      
         return view('Admin.Formation.utlisateur',[
             "users" => $data,
@@ -30,7 +30,7 @@ class ApiController extends Controller
     public function ShowFormationMessages()
     {
         //Here i get Data From the Api
-        $data = file_get_contents('http://localhost:90/api/getMessages?key=MarouaneSH-api');
+        $data = file_get_contents('http://localhost:8000/api/getMessages?key=MarouaneSH-api');
       
         return view('Admin.Formation.Messages',[
              "messages" => $data,

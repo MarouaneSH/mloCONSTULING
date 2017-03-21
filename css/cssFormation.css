@@ -24,3 +24,9 @@ a:hover
 {
     text-align: left;
 }
+.card-msg .fa
+{
+       position: absolute;
+    right: 40px;
+    top: 90px;
+}

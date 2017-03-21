@@ -6,57 +6,22 @@
 @section('content')
 
 <div class="container col-md-9">
-    <!--<div class="row">
-        <div class="col-md-4">
-            <div class="card card-msg">
-                <h5>User Name :</h5>
-                <h5>Sujet :</h5>
-                <h5>Date :</h5>
+    <div class="row card card-msg">
+        <h4>Listes Des Messages recu</h4>
+    </div>
+    <div class="row">
+        @foreach(json_decode($messages,true) as $message)
+            <div class="col-md-4">
+                <div class="card card-msg">
+                    <h5>Sujet :  {{$message['title']}}  </h5>
+                    <h5>Nom : {{$message['title']}} </h5>
+                    <h5>Date : {{$message['date_message']}}</h5>  
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+  
+                </div>
             </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card card-msg">
-                <h5>User Name :</h5>
-                <h5>Sujet :</h5>
-                <h5>Date :</h5>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card card-msg">
-                <h5>User Name :</h5>
-                <h5>Sujet :</h5>
-                <h5>Date :</h5>
-            </div>
-        </div>-->
-         <table class="table">
-            <thead>
-            <tr>
-                <th>id</th>
-                <th>title</th>
-                <th>comment</th>
-            </tr>
-            </thead>
-            <tbody>
-                @foreach(json_decode($messages,true) as $message)
-                    <tr>
-                        <td>  {{$message['id']}} </td>
-                        <td> {{$message['title']}}</td>
-                        <td> {{$message['comment']}}</td>
-                    </tr>
-                    <!--here Iwant to use pagination-->
-                @endforeach
-            </tbody>
-        <table> 
-    
-
-
-
-
-
-
-
-
-</div>
+        @endforeach        
+    </div>  
 </div>
 
 @endsection
