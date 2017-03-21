@@ -30,3 +30,45 @@ a:hover
     right: 40px;
     top: 90px;
 }
+
+.AddCours
+{
+    position: fixed;
+    width: 70%;
+    height: 400px;
+    background: #19b395;
+    z-index: 100;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border: solid rgba(21, 19, 19, 0.64);
+    text-align: center;
+    color: white;
+}
+
+.addNewCours
+{
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    background: red;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.54);;
+
+}
+.addNewCours iframe
+{
+    position: absolute;
+    width: 70%;
+    height: 380px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}

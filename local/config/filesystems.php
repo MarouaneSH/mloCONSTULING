@@ -63,11 +63,18 @@ return [
             'bucket' => env('AWS_BUCKET'),
         ],
 
-	'document' => [
-            'driver' => 'local',
-            'root' => env('APP_STORAGE').'document',
-            'visibility' => 'public',	     
+        'document' => [
+                'driver' => 'local',
+                'root' => env('APP_STORAGE').'document',
+                'visibility' => 'public',	     
+            ],
+        'COURS' => [
+                'driver' => 'local',
+                'root'=> public_path(),
+
         ],
+
+        
 
     ],
 

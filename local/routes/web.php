@@ -46,6 +46,7 @@ Route::group(["prefix" => "Admin" ,"middleware" => "Admine"],function(){
     Route::get('Formation',"ApiController@index")->name('FormationApi');
     Route::get('Formation/users',"ApiController@ShowFormationUsers")->name('formation_users');
     Route::get('Formation/messages',"ApiController@ShowFormationMessages")->name('formation_messages');
+    Route::post('Formation/Add_Cours',"ApiController@Add_cours")->name('Add_cours');
 
 
      //Get Messages
