@@ -38,6 +38,33 @@ class ApiController extends Controller
         ]);
     }
 
+    public function Edit_cours()
+    {
+        //Here i get Data From the Api
+        $data = file_get_contents('http://localhost:8000/api/getAllCours?key=MarouaneSH-api');
+
+        return view('Admin.Formation.editCours',["cours" => $data]);
+
+
+    }
+
+    public function delete_Cours(Request $request)
+    {
+
+        //Here i get Data From the Api
+        $data = file_get_contents('http://localhost:8000/api/RemoveCours?key=MarouaneSH-api&id='.$request->id);
+
+        return $data;
+    }
+
+    public function getUserInfo($id)
+    {
+           $data = file_get_contents('http://localhost:8000/api/getSpecifiUsers?key=MarouaneSH-api&id='.$id);
+           return Response::json([
+               "user" =>json_decode($data)
+           ]);;
+    }
+
     public function Add_cours(Request $request)
     {
         
