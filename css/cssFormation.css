@@ -31,7 +31,7 @@ a:hover
     top: 90px;
 }
 
-.AddCours
+.AddCours ,
 {
     position: fixed;
     width: 70%;
@@ -47,8 +47,24 @@ a:hover
     text-align: center;
     color: white;
 }
+.addnewCode{
+     position: fixed;
+    width: 70%;
+    width: 400px;
+    height: 300px;
+    background: #19b395;
+    z-index: 100;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border: solid rgba(21, 19, 19, 0.64);
+    text-align: center;
+    color: white;
+}
 
-.addNewCours
+.addNewCours 
 {
     position: fixed;
     width: 100%;
@@ -86,7 +102,7 @@ a:hover
 {
         background: #587073;
     position: absolute;
-    top: 0;
+    top: 100px;
     width: 50%;
     text-align: center;
     padding: 50px;
@@ -96,6 +112,7 @@ a:hover
     border: solid #ad9797 1px;
     color: white;
     display: none;
+    z-index: 300;
 }
 .table-cours tr:hover
 {

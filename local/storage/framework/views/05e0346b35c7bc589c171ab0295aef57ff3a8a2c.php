@@ -33,13 +33,38 @@
                  <h4><i class="fa fa-plus" aria-hidden="true" style="margin-right:10px"></i>Ajouter un Cours</h4>
           
            </div>
+         
+           <div class="card" style="text-align:left;cursor:pointer" id="addBook">
+         
+                 <h4><i class="fa fa-plus" aria-hidden="true" style="margin-right:10px"></i>Ajouter un Code de paiement</h4>
+          
+           </div>
         </div>
 </div>
 
 <div class="addNewCours" style="display:none;">
-<i class="fa fa-times exit" aria-hidden="true"></i>
-<iframe src="http://localhost:8000/api/AddBooks?key=MarouaneSH-api" frameborder="0"></iframe>
+        <i class="fa fa-times exit" aria-hidden="true"></i>
+        <iframe src="http://localhost:8000/api/AddBooks?key=MarouaneSH-api" frameborder="0"></iframe>
 </div>
+
+<div class="addnewCode">
+        <i class="fa fa-times exit" style="color:white;font-size:30px;right:10px" aria-hidden="true"></i>
+        <form action="" id="formaddNewCode">
+                
+                <?php echo e(csrf_field()); ?>
+
+                <button style="margin-top:80px" type="submit">Generer Un code de paiement</button>
+                <h3 style="margin-top:80px;display:none">Code a été génerer avec success</h3>
+                <h2 style="display:none">ssdsdsqsxwxqqdq</h2>
+        </form>
+</div>
+<div class="loading" style="top:25%k;position:fixed">
+                        
+                                
+                                <svg width='120px' height='120px' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="uil-squares"><rect x="0" y="0" width="100" height="100" fill="none" class="bk"></rect><rect x="15" y="15" width="20" height="20" fill="#19b395" class="sq"><animate attributeName="fill" from="#19b395" to="#ffffff" repeatCount="indefinite" dur="1s" begin="0.0s" values="#ffffff;#ffffff;#19b395;#19b395" keyTimes="0;0.1;0.2;1"></animate></rect><rect x="40" y="15" width="20" height="20" fill="#19b395" class="sq"><animate attributeName="fill" from="#19b395" to="#ffffff" repeatCount="indefinite" dur="1s" begin="0.125s" values="#ffffff;#ffffff;#19b395;#19b395" keyTimes="0;0.1;0.2;1"></animate></rect><rect x="65" y="15" width="20" height="20" fill="#19b395" class="sq"><animate attributeName="fill" from="#19b395" to="#ffffff" repeatCount="indefinite" dur="1s" begin="0.25s" values="#ffffff;#ffffff;#19b395;#19b395" keyTimes="0;0.1;0.2;1"></animate></rect><rect x="15" y="40" width="20" height="20" fill="#19b395" class="sq"><animate attributeName="fill" from="#19b395" to="#ffffff" repeatCount="indefinite" dur="1s" begin="0.875s" values="#ffffff;#ffffff;#19b395;#19b395" keyTimes="0;0.1;0.2;1"></animate></rect><rect x="65" y="40" width="20" height="20" fill="#19b395" class="sq"><animate attributeName="fill" from="#19b395" to="#ffffff" repeatCount="indefinite" dur="1s" begin="0.375" values="#ffffff;#ffffff;#19b395;#19b395" keyTimes="0;0.1;0.2;1"></animate></rect><rect x="15" y="65" width="20" height="20" fill="#19b395" class="sq"><animate attributeName="fill" from="#19b395" to="#ffffff" repeatCount="indefinite" dur="1s" begin="0.75s" values="#ffffff;#ffffff;#19b395;#19b395" keyTimes="0;0.1;0.2;1"></animate></rect><rect x="40" y="65" width="20" height="20" fill="#19b395" class="sq"><animate attributeName="fill" from="#19b395" to="#ffffff" repeatCount="indefinite" dur="1s" begin="0.625s" values="#ffffff;#ffffff;#19b395;#19b395" keyTimes="0;0.1;0.2;1"></animate></rect><rect x="65" y="65" width="20" height="20" fill="#19b395" class="sq"><animate attributeName="fill" from="#19b395" to="#ffffff" repeatCount="indefinite" dur="1s" begin="0.5s" values="#ffffff;#ffffff;#19b395;#19b395" keyTimes="0;0.1;0.2;1"></animate></rect></svg>
+
+                                
+                </div>
 
 <?php $__env->stopSection(); ?>
 
@@ -52,6 +77,28 @@
                 })
                 $("#addBook").click(function(){
                     $(".addNewCours").show();
+                })
+                $("#formaddNewCode").submit(function(e){
+                        e.preventDefault();
+                        $.ajax({
+                                url:"<?php echo e(route('addPaeiment')); ?>",
+                                type:"POST",
+                                beforeSend:function(){
+                                 $(".loading").show();
+                                },
+                                data:{_token:"<?php echo e(csrf_token()); ?>"},
+                                success:function(data){
+                                   $(".loading").hide();
+                                  
+                                   $("#formaddNewCode h2").show();
+                                   $("#formaddNewCode h3").show();
+                                    $("#formaddNewCode h2").html(data.code);
+                                   $("#formaddNewCode button").hide();
+                                },
+                                error:function(){
+                                   alert("Something Wrong Please Contact Developer");
+                                }
+                        })
                 })
         })
         

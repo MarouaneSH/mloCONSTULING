@@ -64,7 +64,41 @@ class ApiController extends Controller
                "user" =>json_decode($data)
            ]);;
     }
+    public function addPaeiment()
+    {
+                        $curl = curl_init();
+                        $code_genereate = str_random(12);
+                        curl_setopt_array($curl, array(
+                        CURLOPT_PORT => "8000",
+                        CURLOPT_URL => "http://localhost:8000/api/genereteCode?key=MarouaneSH-api&code=".$code_genereate,
+                        CURLOPT_RETURNTRANSFER => true,
+                        CURLOPT_ENCODING => "",
+                        CURLOPT_MAXREDIRS => 10,
+                        CURLOPT_TIMEOUT => 30,
+                        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                        CURLOPT_CUSTOMREQUEST => "GET",
+                        CURLOPT_POSTFIELDS => "X-CSRF-TOKEN%20=xI8iiBIo8qPyELfokBe3iukG6xl4yUwS3wTnY3Hi",
+                        CURLOPT_HTTPHEADER => array(
+                            "authorization: Basic dGVzdEBnbWFpbC5jb206MTIzMzIx",
+                            "cache-control: no-cache",
+                            "content-type: application/x-www-form-urlencoded",
+                            "postman-token: 287584f5-3ded-af99-2161-7891106bee0f"
+                        ),
+                        ));
 
+                        $response = curl_exec($curl);
+                        $err = curl_error($curl);
+
+                        curl_close($curl);
+
+                        if ($err) {
+                        echo "cURL Error #:" . $err;
+                        } else {
+                            return Response::json([
+                                "code"=>$code_genereate
+                            ]);
+                        }
+    }
     public function Add_cours(Request $request)
     {
         
