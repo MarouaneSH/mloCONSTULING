@@ -26,6 +26,10 @@
             <li><a href="{{route('dashboard')}}" @if($route == 'dashboard') class="active" @endif>DEMANDES DEVIS</a></li>
             <li><a href="{{route('tourdash','visite360')}}" @if($route == 'tourdash') class="active" @endif>TOURDASH</a></li>
              <li><a href="{{route('FormationApi')}}" @if($route == 'FormationApi') class="active" @endif>Formation</a></li>
+             <!--<li><a href="" class="sub-nav">Utilisateur Inscrit</a></li>
+             <li><a href="" class="sub-nav">Message Recu</a></li>
+             <li><a href="" class="sub-nav">Cours ajouté</a></li>
+             <li><a href="" class="sub-nav">Ajouter un cours</a></li>-->
         </ul>
     </div>
     <div class="col-md-3"></div>

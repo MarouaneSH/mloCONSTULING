@@ -26,6 +26,10 @@
             <li><a href="<?php echo e(route('dashboard')); ?>" <?php if($route == 'dashboard'): ?> class="active" <?php endif; ?>>DEMANDES DEVIS</a></li>
             <li><a href="<?php echo e(route('tourdash','visite360')); ?>" <?php if($route == 'tourdash'): ?> class="active" <?php endif; ?>>TOURDASH</a></li>
              <li><a href="<?php echo e(route('FormationApi')); ?>" <?php if($route == 'FormationApi'): ?> class="active" <?php endif; ?>>Formation</a></li>
+             <!--<li><a href="" class="sub-nav">Utilisateur Inscrit</a></li>
+             <li><a href="" class="sub-nav">Message Recu</a></li>
+             <li><a href="" class="sub-nav">Cours ajouté</a></li>
+             <li><a href="" class="sub-nav">Ajouter un cours</a></li>-->
         </ul>
     </div>
     <div class="col-md-3"></div>

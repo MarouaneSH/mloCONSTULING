@@ -22,7 +22,7 @@
             </div>
             <div class="card">
                  <a href="{{route('formation_cours')}}">
-                    <h5><i class="fa fa-comment" aria-hidden="true"></i></h5>
+                    <h5><i class="fa fa-graduation-cap" aria-hidden="true"></i></h5>
                     <h4>Cours Ajouté</h4>
                  </a>
             </div>
@@ -35,11 +35,16 @@
           
            </div>
          
-           <div class="card" style="text-align:left;cursor:pointer" id="addBook">
+           <div class="card" style="text-align:left;cursor:pointer" id="addCode">
          
                  <h4><i class="fa fa-plus" aria-hidden="true" style="margin-right:10px"></i>Ajouter un Code de paiement</h4>
           
            </div>
+           <a href="{{route('Addmessage')}}">
+                <div class="card" style="text-align:left;cursor:pointer" id="addNewMsg">       
+                        <h4><i class="fa fa-plus" aria-hidden="true" style="margin-right:10px"></i>Envoyer un nouveau message</h4>
+                </div>
+           </a>
         </div>
 </div>
 
@@ -77,6 +82,9 @@
                 })
                 $("#addBook").click(function(){
                     $(".addNewCours").show();
+                })
+                $("#addCode").click(function(){
+                   $(".addnewCode").show();
                 })
                 $("#formaddNewCode").submit(function(e){
                         e.preventDefault();

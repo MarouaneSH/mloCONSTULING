@@ -39,6 +39,7 @@
      border: 1px solid #e1e6ef
    
 }
+
 .nav-admin
 {
     background: #2C3136;
@@ -164,4 +165,13 @@ button
 .active
 {
     background: #19b395 !important;
+}
+
+a.sub-nav
+{
+    background: initial!important;
+    text-align: center!important;
+    padding: 0!important;
+    
+
 }

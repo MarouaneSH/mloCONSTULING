@@ -50,7 +50,8 @@ Route::group(["prefix" => "Admin" ,"middleware" => "Admine"],function(){
     Route::get("Formation/delete_Cours","ApiController@delete_Cours")->name("formation_cours_delete");
     Route::get("Formation/get_Users/{id}","ApiController@getUserInfo")->name("formation_get_users");
     Route::post("Formation/addPaeiment","ApiController@addPaeiment")->name("addPaeiment");
-
+    Route::get("Formation/Addmessage","ApiController@Addmessage")->name("Addmessage");
+     
      //Get Messages
     Route::get('getDemande',"AdminController@getDemande");
     

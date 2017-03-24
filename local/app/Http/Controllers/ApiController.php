@@ -64,6 +64,10 @@ class ApiController extends Controller
                "user" =>json_decode($data)
            ]);;
     }
+
+    public function Addmessage(){
+        return view('Admin.formation.addMessage');
+    }
     public function addPaeiment()
     {
                         $curl = curl_init();

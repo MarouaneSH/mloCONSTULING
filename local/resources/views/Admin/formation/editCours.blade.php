@@ -67,26 +67,30 @@ $(document).ready(function(){
                 })
 
     $(".remove").click(function(){
+        if(confirm("Vous Voulez Vraiment Supprimer ce cours ?"))
+        {
+            $(this).parent().parent().hide();
+            $.ajax({
+                url:"{{route('formation_cours_delete')}}",
+                data:{ id : $(this).parent().children('input').val() },
+                beforeSend:function()
+                {
+                    $(".loading").show();
+                },
+                success:function(data){
+                    
+                     alert("Cours a été supprimer avec success");
+                     $(".loading").hide();
+                    
+                },
+                error:function()
+                {
+                    alert("un erreur s'est produit ");
+                }
+            })
+        }
+
         
-        $(this).parent().parent().hide();
-        $.ajax({
-            url:"{{route('formation_cours_delete')}}",
-            data:{ id : $(this).parent().children('input').val() },
-            beforeSend:function()
-            {
-                $(".loading").show();
-            },
-            success:function(data){
-                
-                 alert("Cours a été supprimer avec success");
-                 $(".loading").hide();
-                 
-            },
-            error:function()
-            {
-                alert("un erreur s'est produit ");
-            }
-        })
     })
 
     $(".edit").click(function(){
