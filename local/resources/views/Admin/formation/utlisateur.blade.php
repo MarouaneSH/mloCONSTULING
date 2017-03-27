@@ -17,7 +17,7 @@
     </thead>
     <tbody>
         @foreach(json_decode($users,true) as $user)
-            <tr @if($user['subscribed']=='1') class="success" @else class="info" @endif>
+            <tr @if($user['subscribed']=='1') class="success" @else class="danger" @endif>
                     <td>{{$user['name']}}</td>
                     <td>{{$user['email']}} </td>
                     <td>{{$user['telephone']}}</td>

@@ -16,7 +16,7 @@
     </thead>
     <tbody>
         <?php $__currentLoopData = json_decode($users,true); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $user): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <tr <?php if($user['subscribed']=='1'): ?> class="success" <?php else: ?> class="info" <?php endif; ?>>
+            <tr <?php if($user['subscribed']=='1'): ?> class="success" <?php else: ?> class="danger" <?php endif; ?>>
                     <td><?php echo e($user['name']); ?></td>
                     <td><?php echo e($user['email']); ?> </td>
                     <td><?php echo e($user['telephone']); ?></td>

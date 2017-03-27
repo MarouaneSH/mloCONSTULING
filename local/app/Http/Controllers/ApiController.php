@@ -68,6 +68,21 @@ class ApiController extends Controller
     public function Addmessage(){
         return view('Admin.formation.addMessage');
     }
+
+    public function getPeimentCode(){
+         $data = file_get_contents('http://localhost:8000/api/paiementCode?key=MarouaneSH-api');
+        return view('Admin.formation.paiementcode',[
+            "codes"=>$data
+        ]);
+    }
+
+    public function getDemandeVerification()
+    {
+        $data = file_get_contents('http://localhost:8000/api/demandeVerification?key=MarouaneSH-api');
+        return view('Admin.formation.paiementcode',[
+            "demande"=>$data
+        ]);
+    }
     public function addPaeiment()
     {
                         $curl = curl_init();

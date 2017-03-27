@@ -22,7 +22,13 @@
             <div class="card">
                  <a href="<?php echo e(route('formation_cours')); ?>">
                     <h5><i class="fa fa-graduation-cap" aria-hidden="true"></i></h5>
-                    <h4>Cours Ajouté</h4>
+                    <h4>Listes des Cours Ajouté</h4>
+                 </a>
+            </div>
+            <div class="card">
+                 <a href="<?php echo e(route('formation_cours')); ?>">
+                    <h5><i class="fa fa-graduation-cap" aria-hidden="true"></i></h5>
+                    <h4>Listes des codes de paiements</h4>
                  </a>
             </div>
         

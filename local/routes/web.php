@@ -51,6 +51,7 @@ Route::group(["prefix" => "Admin" ,"middleware" => "Admine"],function(){
     Route::get("Formation/get_Users/{id}","ApiController@getUserInfo")->name("formation_get_users");
     Route::post("Formation/addPaeiment","ApiController@addPaeiment")->name("addPaeiment");
     Route::get("Formation/Addmessage","ApiController@Addmessage")->name("Addmessage");
+    Route::get('Formation/getPeimentCode',"ApiController@getPeimentCode")->name("getPaiement");
      
      //Get Messages
     Route::get('getDemande',"AdminController@getDemande");
