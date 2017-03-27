@@ -27,12 +27,17 @@
                  </a>
             </div>
             <div class="card">
-                 <a href="{{route('formation_cours')}}">
+                 <a href="{{route('getPaiement')}}">
                     <h5><i class="fa fa-graduation-cap" aria-hidden="true"></i></h5>
                     <h4>Listes des codes de paiements</h4>
                  </a>
             </div>
-        
+            <div class="card">
+                 <a href="{{route('getDemandeVerfication')}}">
+                    <h5><i class="fa fa-graduation-cap" aria-hidden="true"></i></h5>
+                    <h4>Listes des demandes de verification</h4>
+                 </a>
+            </div>
         </div>
         <div class="col-md-4">
            <div class="card" style="text-align:left;cursor:pointer" id="addBook">

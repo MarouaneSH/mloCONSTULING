@@ -52,6 +52,7 @@ Route::group(["prefix" => "Admin" ,"middleware" => "Admine"],function(){
     Route::post("Formation/addPaeiment","ApiController@addPaeiment")->name("addPaeiment");
     Route::get("Formation/Addmessage","ApiController@Addmessage")->name("Addmessage");
     Route::get('Formation/getPeimentCode',"ApiController@getPeimentCode")->name("getPaiement");
+    Route::get('Formation/getDemandeVerfication',"ApiController@getDemandeVerfication")->name("getDemandeVerfication");
      
      //Get Messages
     Route::get('getDemande',"AdminController@getDemande");

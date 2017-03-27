@@ -76,13 +76,14 @@ class ApiController extends Controller
         ]);
     }
 
-    public function getDemandeVerification()
+    public function getDemandeVerfication()
     {
         $data = file_get_contents('http://localhost:8000/api/demandeVerification?key=MarouaneSH-api');
-        return view('Admin.formation.paiementcode',[
-            "demande"=>$data
+        return view('Admin.formation.DemandeVerification',[
+            "demandes"=>$data
         ]);
     }
+
     public function addPaeiment()
     {
                         $curl = curl_init();

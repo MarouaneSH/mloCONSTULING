@@ -9,16 +9,23 @@
       <tr>
         <th>Code</th>
         <th>Utilisé</th>
-
+        <th>Par</th>
       </tr>
     </thead>
     <tbody>
+   
   @foreach(json_decode($codes,true) as $code)
             <tr @if($code['used']=='1') class="success" @else class="danger" @endif>
                     <td>{{$code['code']}}</td>
                      @if($code['used']=='1') 
-                    <td>Oui</td>
-                     @else<td>Non</td>@endif
+                     <td> Oui</td>
+                     <td>{{$code['user']['name']}}</td>
+                   
+                     @else
+                     <td>Non</td>
+                     <td>##</td>
+                     @endif
+
             </tr>
         @endforeach
         </tbody>
