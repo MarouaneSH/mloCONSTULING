@@ -84,6 +84,19 @@ class ApiController extends Controller
         ]);
     }
 
+    public function postDocBiblio()
+    {
+        return view('Admin.formation.addNewDocBiblio');
+    }
+
+    public function Problems()
+    {
+        $data = file_get_contents('http://localhost:8000/api/problems?key=MarouaneSH-api');
+        return view('Admin.formation.Problems',[
+            "problems"=>$data
+        ]);
+    }
+
     public function addPaeiment()
     {
                         $curl = curl_init();

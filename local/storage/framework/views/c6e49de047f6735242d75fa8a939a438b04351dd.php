@@ -8,16 +8,23 @@
       <tr>
         <th>Code</th>
         <th>Utilisé</th>
-
+        <th>Par</th>
       </tr>
     </thead>
     <tbody>
+   
   <?php $__currentLoopData = json_decode($codes,true); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $code): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <tr <?php if($code['used']=='1'): ?> class="success" <?php else: ?> class="danger" <?php endif; ?>>
                     <td><?php echo e($code['code']); ?></td>
                      <?php if($code['used']=='1'): ?> 
-                    <td>Oui</td>
-                     <?php else: ?><td>Non</td><?php endif; ?>
+                     <td> Oui</td>
+                     <td><?php echo e($code['user']['name']); ?></td>
+                   
+                     <?php else: ?>
+                     <td>Non</td>
+                     <td>##</td>
+                     <?php endif; ?>
+
             </tr>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </tbody>

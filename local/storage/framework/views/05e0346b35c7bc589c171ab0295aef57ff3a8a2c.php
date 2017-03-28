@@ -26,12 +26,23 @@
                  </a>
             </div>
             <div class="card">
-                 <a href="<?php echo e(route('formation_cours')); ?>">
-                    <h5><i class="fa fa-graduation-cap" aria-hidden="true"></i></h5>
+                 <a href="<?php echo e(route('getPaiement')); ?>">
+                    <h5><i class="fa fa-credit-card-alt" aria-hidden="true"></i></h5>
                     <h4>Listes des codes de paiements</h4>
                  </a>
             </div>
-        
+            <div class="card">
+                 <a href="<?php echo e(route('getDemandeVerfication')); ?>">
+                    <h5><i class="fa fa-check-circle" aria-hidden="true"></i></h5>
+                    <h4>Listes des demandes de verification</h4>
+                 </a>
+            </div>
+            <div class="card">
+                 <a href="<?php echo e(route('Problems')); ?>">
+                    <h5><i class="fa fa-check-circle" aria-hidden="true"></i></h5>
+                    <h4>Report problem</h4>
+                 </a>
+            </div>
         </div>
         <div class="col-md-4">
            <div class="card" style="text-align:left;cursor:pointer" id="addBook">
@@ -48,6 +59,11 @@
            <a href="<?php echo e(route('Addmessage')); ?>">
                 <div class="card" style="text-align:left;cursor:pointer" id="addNewMsg">       
                         <h4><i class="fa fa-plus" aria-hidden="true" style="margin-right:10px"></i>Envoyer un nouveau message</h4>
+                </div>
+           </a>
+           <a href="<?php echo e(route('postDocBiblio')); ?>">
+                <div class="card" style="text-align:center;cursor:pointer" id="addNewMsg">       
+                        <h4><i class="fa fa-plus" aria-hidden="true" style="margin-right:10px"></i>Ajouter un nouveau document au bibliotheque</h4>
                 </div>
            </a>
         </div>

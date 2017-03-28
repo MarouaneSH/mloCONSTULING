@@ -53,7 +53,8 @@ Route::group(["prefix" => "Admin" ,"middleware" => "Admine"],function(){
     Route::get("Formation/Addmessage","ApiController@Addmessage")->name("Addmessage");
     Route::get('Formation/getPeimentCode',"ApiController@getPeimentCode")->name("getPaiement");
     Route::get('Formation/getDemandeVerfication',"ApiController@getDemandeVerfication")->name("getDemandeVerfication");
-     
+    Route::get('Formation/Bibliotheque',"ApiController@postDocBiblio")->name("postDocBiblio");
+    Route::get('Formation/Problems',"ApiController@Problems")->name("Problems");
      //Get Messages
     Route::get('getDemande',"AdminController@getDemande");
     
