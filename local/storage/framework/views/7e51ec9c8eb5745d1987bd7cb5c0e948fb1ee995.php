@@ -1,14 +1,13 @@
-@extends('layout.header')
-@section('style')
+<?php $__env->startSection('style'); ?>
 <link href="https://fonts.googleapis.com/css?family=Archivo+Black" rel="stylesheet">
-  <link href="  {!! asset('css/styleRDV.css') !!}" rel="stylesheet">
-  <link href="  {!! asset('css/styleFooter.css') !!}" rel="stylesheet">
+  <link href="  <?php echo asset('css/styleRDV.css'); ?>" rel="stylesheet">
+  <link href="  <?php echo asset('css/styleFooter.css'); ?>" rel="stylesheet">
   <style>
      
   </style>
-@endsection
-@section('content')
-@include('layout.contact')
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('content'); ?>
+<?php echo $__env->make('layout.contact', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
   <div class="bg">
 
@@ -20,7 +19,7 @@
                     background: rgba(28, 185, 200, 0.33);">
             </div>
 
-      <img src="{!! asset('/img/slide1.jpg') !!}" alt="" style="height: 500px;width:100%;margin-top:50px;">
+      <img src="<?php echo asset('/img/slide1.jpg'); ?>" alt="" style="height: 500px;width:100%;margin-top:50px;">
       <div class="caption">
          <h1 id="title" style="margin-top: 80px;font-size:60px;font-weight:bold"> Réception d’appel 
               <p style="font-size:20px;font-weight:400"> <span id="cptn">Votre satisfaction client </span> Augmente.</p>
@@ -54,15 +53,15 @@
           <div class="row">
                 <div class="nav-services col-md-4 col-sm-5">
                         <ul id="tab-services">
-                            <li class="serv-active"> <img src="{!!asset('img/flaticon/call-center-female-workers (2).png')!!}" alt=""> <span>Service client</span></li>
-                            <li><img src="{!!asset('img/flaticon/call-center-female-workers (2).png')!!}" alt=""><span style="text-align:right">Le service technique</span></li>
-                            <li><img src="{!!asset('img/online-customer-female-support.png')!!}" alt=""><span>Externalisation administrative</span></li>
+                            <li class="serv-active"> <img src="<?php echo asset('img/flaticon/call-center-female-workers (2).png'); ?>" alt=""> <span>Service client</span></li>
+                            <li><img src="<?php echo asset('img/flaticon/call-center-female-workers (2).png'); ?>" alt=""><span style="text-align:right">Le service technique</span></li>
+                            <li><img src="<?php echo asset('img/online-customer-female-support.png'); ?>" alt=""><span>Externalisation administrative</span></li>
                         </ul>
-                        <a class="btn btn-default btn-devis" href="{!! route('devis') !!}"><i class="fa fa-magic left" ></i> DEVIS GRATUIT</a>
+                        <a class="btn btn-default btn-devis" href="<?php echo route('devis'); ?>"><i class="fa fa-magic left" ></i> DEVIS GRATUIT</a>
                 </div>
                 <div class="services-info col-md-8 col-sm-7">
                     <div id="services1">
-                            <img src="{!!asset('img/flaticon/male-reporter.png')!!}" width="100px" alt="">
+                            <img src="<?php echo asset('img/flaticon/male-reporter.png'); ?>" width="100px" alt="">
                             <h2>Service client</h2>
                                <p style="font-size: 15px;">Le service client a pour rôle d’informer ou fournir au client les informations dont il a besoin sur un produit.
 
@@ -91,7 +90,7 @@
                             <div class="clearfix"></div>
                     </div>
                       <div id="services2">
-                            <img src="{!!asset('img/flaticon/male-reporter.png')!!}" width="100px"  alt="">
+                            <img src="<?php echo asset('img/flaticon/male-reporter.png'); ?>" width="100px"  alt="">
                             <h2>Le service technique (help desk)</h2>
                              <p style="font-size: 15px;">Le rôle du téléopérateur est de fournir une aide technique et d’assister le consommateur pendant diverses
 
@@ -130,7 +129,7 @@
                             <div class="clearfix"></div>
                       </div>
                       <div id="services3">
-                            <img src="{!!asset('img/flaticon/male-reporter.png')!!}" width= "100px" alt="">
+                            <img src="<?php echo asset('img/flaticon/male-reporter.png'); ?>" width= "100px" alt="">
                             <h2>Externalisation administrative</h2>
                             <p  style="font-size: 15px;"> 
                             Pour votre Office management ou secrétariat courant, un assistant externalisé est la solution si :
@@ -172,12 +171,12 @@
   </div>
  
 
-@include('layout.footer')
-@endsection
+<?php echo $__env->make('layout.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php $__env->stopSection(); ?>
 
 
-@section('script')
-<script src="{!!asset('js/typed.min.js')!!}"> </script>
+<?php $__env->startSection('script'); ?>
+<script src="<?php echo asset('js/typed.min.js'); ?>"> </script>
 <script>
 
     $(document).ready(function(){
@@ -234,4 +233,5 @@
 
     }
 </script>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

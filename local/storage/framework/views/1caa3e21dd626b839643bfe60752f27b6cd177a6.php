@@ -1,17 +1,15 @@
-@extends('layout.header')
+<?php $__env->startSection('style'); ?>
 
-@section('style')
-
-    <link rel="stylesheet" href="{!!asset('css/styleHome.css')!!}">
+    <link rel="stylesheet" href="<?php echo asset('css/styleHome.css'); ?>">
     <style>
   
     </style>
-    @include('layout.slider')
-@endsection('style')
-@section('content')
+    <?php echo $__env->make('layout.slider', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('content'); ?>
 
 
-@include('layout.contact')
+<?php echo $__env->make('layout.contact', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
    <!--SLIDER-->
 
   
@@ -31,7 +29,7 @@
                     <h1 style="">MLO CONSULLTING</h1>
               <h3><span>Your Turnover</span> Increases. </h3>
             </div>
-        <img src="{!!asset('img/1.jpg')!!}" alt="Chania" width="460" height="345">
+        <img src="<?php echo asset('img/1.jpg'); ?>" alt="Chania" width="460" height="345">
       </div>
 
       
@@ -41,7 +39,7 @@
                     <h1>MLO CONSULLTING</h1>
               <h3><span id="caro2">Developing Your Idea</span> Becomes easy. </h3>
             </div>
-        <img src="{!!asset('img/3-cn.jpg')!!}" alt="Flower" width="460" height="345">
+        <img src="<?php echo asset('img/3-cn.jpg'); ?>" alt="Flower" width="460" height="345">
         
       </div>
 
@@ -50,7 +48,7 @@
                     <h1>MLO CONSULLTING</h1>
               <h3><span id="caro3">Preserving The ecosystem is our </span> Duty. </h3>
             </div>
-        <img src="{!!asset('img/energie2-cn.jpg')!!}" alt="Flower" width="460" height="345">
+        <img src="<?php echo asset('img/energie2-cn.jpg'); ?>" alt="Flower" width="460" height="345">
       </div>
 
        <div class="item">
@@ -58,7 +56,7 @@
                     <h1>MLO CONSULLTING</h1>
               <h3><span id="caro4">Selling Technics </span> Becomes easy. </h3>
             </div>
-        <img src="{!!asset('img/2088.jpg')!!}" alt="Flower" width="460" height="345">
+        <img src="<?php echo asset('img/2088.jpg'); ?>" alt="Flower" width="460" height="345">
       </div>
     </div>
      
@@ -87,7 +85,7 @@
       <div class="row text">
             <h1>Our <strong>Services</strong> </h1>
             <p class="icon-border">
-                <img src="{!!asset('img/seperate.PNG')!!}" alt="" >
+                <img src="<?php echo asset('img/seperate.PNG'); ?>" alt="" >
            </p>
            <p style="margin-top:30px">
            Our Main Task is to allow you to outsource your prospection services 
@@ -99,7 +97,7 @@
      <div class="total-service">
          <div class="col-md-3 col-sm-3 col-xs-12">
              <div class="single-service">
-                  <a href="{{route('en-appmaking')}}"><img src="{!!asset('img/priserdv.jpg')!!}" alt="" class="img-responsive">
+                  <a href="<?php echo e(route('en-appmaking')); ?>"><img src="<?php echo asset('img/priserdv.jpg'); ?>" alt="" class="img-responsive">
                      <div class="service-content">
                       <h3>Appointment making </h3>
                       <div class="services-desc">
@@ -116,7 +114,7 @@
          </div>
          <div class="col-md-3 col-sm-3 col-xs-12">
              <div class="single-service">
-                  <a href="{{route('en-Telemarketing')}}"><img src="{!!asset('img/111.jpg')!!}" alt="" class="img-responsive">
+                  <a href="<?php echo e(route('en-Telemarketing')); ?>"><img src="<?php echo asset('img/111.jpg'); ?>" alt="" class="img-responsive">
                         <div class="service-content">
                         <h3>Telemarketing</h3>
                         <div class="services-desc">
@@ -135,7 +133,7 @@
          </div>
          <div class="col-md-3 col-sm-3 col-xs-12">
              <div class="single-service">
-                  <a href="{{route('en-formation')}}"><img src="{!!asset('img/televente.jpg')!!}" alt="" class="img-responsive">
+                  <a href="<?php echo e(route('en-formation')); ?>"><img src="<?php echo asset('img/televente.jpg'); ?>" alt="" class="img-responsive">
                      <div class="service-content">
                         <h3>Incoming calls</h3>
                         <div class="services-desc">
@@ -153,7 +151,7 @@
          </div>
          <div class="col-md-3 col-sm-3 col-xs-12">
              <div class="single-service">
-                  <a href="{{route('en-webstore')}}"><img src="{!!asset('img/mobile-commerce10.jpg')!!}" alt="" class="img-responsive">
+                  <a href="<?php echo e(route('en-webstore')); ?>"><img src="<?php echo asset('img/mobile-commerce10.jpg'); ?>" alt="" class="img-responsive">
                         <div class="service-content">
                             <h3>Web to Store</h3>
                             <div class="services-desc">
@@ -193,7 +191,7 @@
         <div class="row cases-image">
 
                     <div id="telecom1">
-                      <img src="{!!asset('img/iphone-8-edge-to-edge-display.jpeg')!!}" class="img-responsive" alt="" >
+                      <img src="<?php echo asset('img/iphone-8-edge-to-edge-display.jpeg'); ?>" class="img-responsive" alt="" >
                       <div class="caption">
                           <h3>Telecom Solutions<br>
                                <a class="plus-Telecom">
@@ -204,7 +202,7 @@
                    </div>
 
                    <div id="busnis1" >        
-                      <img src="{!!asset('img/Tribune-commandements-campagne-web-store-reussie-F.jpg')!!}" class="img-responsive" alt="" >
+                      <img src="<?php echo asset('img/Tribune-commandements-campagne-web-store-reussie-F.jpg'); ?>" class="img-responsive" alt="" >
                       <div class="caption">
                           <h3>Web to Store <br>
                                <a  id="plus-web-store">
@@ -214,7 +212,7 @@
                     </div>
                    </div>
                     <div id="telecom2">
-                       <img src="{!!asset('img/telecom2.jpg')!!}" class="img-responsive" alt="" >
+                       <img src="<?php echo asset('img/telecom2.jpg'); ?>" class="img-responsive" alt="" >
                        <div class="caption">
                           <h3 style="margin-top: 210px;">Telecom networks<br>
                                <a class="plus-Telecom">
@@ -224,7 +222,7 @@
                     </div>
                     </div>
                     <div id="energie1">
-                       <img src="{!!asset('img/energie2.jpg')!!}" class="img-responsive" alt="" >
+                       <img src="<?php echo asset('img/energie2.jpg'); ?>" class="img-responsive" alt="" >
                        <div class="caption">
                           <h3>Renewable Energy<br>
                                <a id="plus-energie">
@@ -234,7 +232,7 @@
                     </div>
                     </div>
                     <div id="formation1">
-                        <img src="{!!asset('img/formation-presentielle-groupe-2.jpg')!!}" class="img-responsive" alt="" >
+                        <img src="<?php echo asset('img/formation-presentielle-groupe-2.jpg'); ?>" class="img-responsive" alt="" >
                         <div class="caption">
                           <h3 >Professional Training<br>
                                <a id="plus-formation">
@@ -340,12 +338,12 @@
 
 <div class="partners">
     <h1>OUR <strong>PARTNERS</strong> </h1>
-    <img src="{!!asset('img/seperate.PNG')!!}" alt="">
+    <img src="<?php echo asset('img/seperate.PNG'); ?>" alt="">
 </div>
 <div class="portfolio container">
 
         <div class="square" id="sq1">
-            <img src="{!! asset('img/partners/1.png') !!}" alt="">
+            <img src="<?php echo asset('img/partners/1.png'); ?>" alt="">
             <div class="sq-content">
                 <h5>Web to Store</h5>
                 <p>GOOGLE PHOTOGRAPHER</p>
@@ -353,56 +351,56 @@
         </div>
 
         <div class="square" id="sq2">
-            <img src="{!! asset('img/partners/3.png') !!}" alt="">
+            <img src="<?php echo asset('img/partners/3.png'); ?>" alt="">
             <div class="sq-content">
                 <h5>Web to Store</h5>
                 <p>GOOGLE PHOTOGRAPHER</p>
             </div>
         </div>
         <div class="square" id="sq3">
-            <img src="{!! asset('img/partners/2.png') !!}" alt="" style="">
+            <img src="<?php echo asset('img/partners/2.png'); ?>" alt="" style="">
             <div class="sq-content">
                 <h5>Web to Store</h5>
                 <p>GOOGLE PHOTOGRAPHER</p>
             </div>
         </div>
         <div class="square" id="sq1" style="left:69%;">
-            <img src="{!! asset('img/partners/4.jpg') !!}" alt="" style="">
+            <img src="<?php echo asset('img/partners/4.jpg'); ?>" alt="" style="">
             <div class="sq-content">
                 <h5>Web to Store</h5>
                 <p>GOOGLE PHOTOGRAPHER</p>
             </div>
         </div>
         <div class="square" id="sq3" style="left:0;top:291px">
-            <img src="{!! asset('img/partners/5.jpg') !!}" alt="" style="">
+            <img src="<?php echo asset('img/partners/5.jpg'); ?>" alt="" style="">
             <div class="sq-content">
                 <h5>Web to Store</h5>
                 <p>GOOGLE PHOTOGRAPHER</p>
             </div>
         </div>
         <div class="square" id="sq1" style="left:46%;top:231px">
-            <img src="{!! asset('img/partners/6.jpg') !!}" alt="" style="width:40%">
+            <img src="<?php echo asset('img/partners/6.jpg'); ?>" alt="" style="width:40%">
             <div class="sq-content">
                 <h5>Web to Store</h5>
                 <p>GOOGLE PHOTOGRAPHER</p>
             </div>
         </div>
         <div class="square" id="sq2" style="left:69%;top:291px">
-            <img src="{!! asset('img/partners/7.png') !!}" alt="" style="">
+            <img src="<?php echo asset('img/partners/7.png'); ?>" alt="" style="">
             <div class="sq-content">
                 <h5>Web to Store</h5>
                 <p>GOOGLE PHOTOGRAPHER</p>
             </div>
         </div>
         <div class="square" id="sq2" style="left:23%;top:421px">
-            <img src="{!! asset('img/partners/12.jpg') !!}" alt="" style="width:100%">
+            <img src="<?php echo asset('img/partners/12.jpg'); ?>" alt="" style="width:100%">
             <div class="sq-content">
                 <h5>Web to Store</h5>
                 <p>GOOGLE PHOTOGRAPHER</p>
             </div>
         </div>
         <div class="square" id="sq4" style="left:0;top:521px">
-            <img src="{!! asset('img/partners/3.jpg') !!}" alt="" style="width:90%">
+            <img src="<?php echo asset('img/partners/3.jpg'); ?>" alt="" style="width:90%">
             <div class="sq-content">
                 <h5>Web to Store</h5>
                 <p>GOOGLE PHOTOGRAPHER</p>
@@ -410,7 +408,7 @@
         </div>
 
          <div class="square" id="sq4" style="left:46%;top:521px">
-            <img src="{!! asset('img/partners/13.png') !!}" alt="" style="">
+            <img src="<?php echo asset('img/partners/13.png'); ?>" alt="" style="">
             <div class="sq-content">
                 <h5>Web to Store</h5>
                 <p>GOOGLE PHOTOGRAPHER</p>
@@ -418,7 +416,7 @@
         </div>
 
         <div class="square" id="sq3" style="left:69%;top:721px">
-            <img src="{!! asset('img/partners/10.jpg') !!}" alt="" style="">
+            <img src="<?php echo asset('img/partners/10.jpg'); ?>" alt="" style="">
             <div class="sq-content">
                 <h5>Web to Store</h5>
                 <p>GOOGLE PHOTOGRAPHER</p>
@@ -426,7 +424,7 @@
         </div>
 
         <div class="square" id="sq2" style="left:0;top:811px">
-            <img src="{!! asset('img/partners/18.png') !!}" alt="" style="">
+            <img src="<?php echo asset('img/partners/18.png'); ?>" alt="" style="">
             <div class="sq-content">
                 <h5>Web to Store</h5>
                 <p>GOOGLE PHOTOGRAPHER</p>
@@ -434,7 +432,7 @@
         </div>
 
         <div class="square" id="sq4" style="left:23%;top:841px">
-            <img src="{!! asset('img/partners/14.jpg') !!}" alt="" style="width:40%">
+            <img src="<?php echo asset('img/partners/14.jpg'); ?>" alt="" style="width:40%">
             <div class="sq-content">
                 <h5>Web to Store</h5>
                 <p>GOOGLE PHOTOGRAPHER</p>
@@ -442,7 +440,7 @@
         </div>
 
         <div class="square" id="sq2" style="left:46%;top:811px">
-            <img src="{!! asset('img/partners/24.png') !!}" alt="" style="">
+            <img src="<?php echo asset('img/partners/24.png'); ?>" alt="" style="">
             <div class="sq-content">
                 <h5>Télécom</h5>
                 <p>Telecom operator</p>
@@ -450,7 +448,7 @@
         </div>
 
         <div class="square" id="sq1" style="left:69%;top:941px">
-            <img src="{!! asset('img/partners/17.png') !!}" alt="" style="width:95%">
+            <img src="<?php echo asset('img/partners/17.png'); ?>" alt="" style="width:95%">
             <div class="sq-content">
                 <h5>Web to Store</h5>
                 <p>GOOGLE PHOTOGRAPHER</p>
@@ -458,14 +456,14 @@
         </div>
 
         <div class="square" id="sq1" style="left:0%;top:1241px">
-            <img src="{!! asset('img/partners/15.png') !!}" alt="" style="">
+            <img src="<?php echo asset('img/partners/15.png'); ?>" alt="" style="">
             <div class="sq-content">
                 <h5>Web to Store</h5>
                 <p>GOOGLE PHOTOGRAPHER</p>
             </div>
         </div>
         <div class="square" id="sq2" style="left:23%;top:1131px">
-            <img src="{!! asset('img/partners/20.jpg') !!}" alt="" style="">
+            <img src="<?php echo asset('img/partners/20.jpg'); ?>" alt="" style="">
             <div class="sq-content">
                 <h5>Web to Store</h5>
                 <p>GOOGLE PHOTOGRAPHER</p>
@@ -473,7 +471,7 @@
         </div>
 
         <div class="square" id="sq3" style="left:46%;top:1241px">
-            <img src="{!! asset('img/partners/21.png') !!}" alt="" style="width:40%">
+            <img src="<?php echo asset('img/partners/21.png'); ?>" alt="" style="width:40%">
             <div class="sq-content">
                 <h5>Télécom</h5>
                 <p>Telecom distributor</p>
@@ -481,7 +479,7 @@
         </div>
 
          <div class="square" id="sq4" style="left:69%;top:1241px">
-            <img src="{!! asset('img/partners/22.jpg') !!}" alt="" style="">
+            <img src="<?php echo asset('img/partners/22.jpg'); ?>" alt="" style="">
             <div class="sq-content">
                 <h5>Télécom</h5>
                 <p>Telecom distributor</p>
@@ -489,7 +487,7 @@
         </div>
 
          <div class="square" id="sq4" style="left:0%;top:1521px">
-            <img src="{!! asset('img/partners/23.jpg') !!}" alt="" style="">
+            <img src="<?php echo asset('img/partners/23.jpg'); ?>" alt="" style="">
             <div class="sq-content">
                 <h5>Télécom</h5>
                 <p>Telecom distributor</p>
@@ -497,7 +495,7 @@
         </div>
 
          <div class="square" id="sq4" style="left:23%;top:1551px; height: 230px;">
-            <img src="{!! asset('img/partners/16.png') !!}" alt="" style="">
+            <img src="<?php echo asset('img/partners/16.png'); ?>" alt="" style="">
             <div class="sq-content">
                 <h5>Web to Store</h5>
                 <p>GOOGLE PHOTOGRAPHER</p>
@@ -505,7 +503,7 @@
         </div>
 
         <div class="square" id="sq2" style="left:46%;top:1461px;height:320px">
-            <img src="{!! asset('img/partners/25.jpg') !!}" alt="" style="">
+            <img src="<?php echo asset('img/partners/25.jpg'); ?>" alt="" style="">
             <div class="sq-content">
                 <h5>Télécom</h5>
                 <p>Telecom operator</p>
@@ -513,7 +511,7 @@
         </div>
 
          <div class="square" id="sq1" style="left:69%;top:1521px;height:260px">
-            <img src="{!! asset('img/partners/26.jpg') !!}" alt="" style="width:100%;">
+            <img src="<?php echo asset('img/partners/26.jpg'); ?>" alt="" style="width:100%;">
             <div class="sq-content">
                 <h5>Télécom</h5>
                 <p>Telecom operator</p>
@@ -521,19 +519,19 @@
         </div>
 </div>
 <div class="About"></div>
-@include('layout.footer')
+<?php echo $__env->make('layout.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
 
-@endsection('content')
+<?php $__env->stopSection(); ?>
 
-@section('script')
+<?php $__env->startSection('script'); ?>
 <script>
     $(document).ready(function() {      
    $('.myCarousel').carousel('pause');
 });
 </script>
 
-<script src="{!!asset('js/typed.min.js')!!}"> </script>
+<script src="<?php echo asset('js/typed.min.js'); ?>"> </script>
 
 <script>
      $(function(){
@@ -823,7 +821,7 @@ function displayCase()
         
         //custom
         $("#right-top img").fadeOut(300,function(){
-               $(this).attr("src","{!!asset('img/4g.PNG')!!}");
+               $(this).attr("src","<?php echo asset('img/4g.PNG'); ?>");
                $(this).fadeIn(500);
         });
 
@@ -833,13 +831,13 @@ function displayCase()
 
 
 
-        $("#right-bottom img").attr("src","{!!asset('img/07782717-photo-fibre-optique.jpg')!!}")
+        $("#right-bottom img").attr("src","<?php echo asset('img/07782717-photo-fibre-optique.jpg'); ?>")
         $("#right-bottom").fadeIn();
         $("#right-bottom .caption h3").html("Fixed Data");
 
 
 
-         $("#left-bottom img").attr("src","{!!asset('img/standard_tel.jpg')!!}")
+         $("#left-bottom img").attr("src","<?php echo asset('img/standard_tel.jpg'); ?>")
         $("#left-bottom").fadeIn();
          $("#left-bottom .caption h3").html("Landline Phone");
        
@@ -880,28 +878,28 @@ function displayCase()
 
 
         //custom
-         $("#right-top img").attr("src","{!!asset('img/parc-eolienne-lrg.jpg')!!}")
+         $("#right-top img").attr("src","<?php echo asset('img/parc-eolienne-lrg.jpg'); ?>")
         $("#right-top").fadeIn();
          $("#right-top .caption h3").html("Wind turbine");
 
-        $("#right-bottom img").attr("src","{!!asset('img/131.jpg')!!}")
+        $("#right-bottom img").attr("src","<?php echo asset('img/131.jpg'); ?>")
         $("#right-bottom").fadeIn();
         $("#right-bottom .caption h3").html(" Wastewater treatment plant");
        
 
-         $("#left-bottom img").attr("src","{!!asset('img/100.jpg')!!}")
+         $("#left-bottom img").attr("src","<?php echo asset('img/100.jpg'); ?>")
         $("#left-bottom").fadeIn();
          $("#left-bottom .caption h3").html("Geothermal Energy");
 
 
          
-        $("#center-top img").attr("src","{!!asset('img/116.jpg')!!}")
+        $("#center-top img").attr("src","<?php echo asset('img/116.jpg'); ?>")
         $("#center-top").fadeIn();
          $("#center-top .caption h3").html("Solar panels");
 
 
 
-         $("#center-bottom img").attr("src","{!!asset('img/128.jpg')!!}")
+         $("#center-bottom img").attr("src","<?php echo asset('img/128.jpg'); ?>")
         $("#center-bottom").fadeIn();
          $("#center-bottom .caption h3").html("Rainwater harvesting");
          
@@ -925,26 +923,26 @@ function displayCase()
 
 
          //custom
-        $("#right-top img").attr("src","{!!asset('img/lee-campbell-86958.jpg')!!}")
+        $("#right-top img").attr("src","<?php echo asset('img/lee-campbell-86958.jpg'); ?>")
         $("#right-top").fadeIn();
         $("#right-top .caption h3").html("Web development");
 
-        $("#right-bottom img").attr("src","{!!asset('img/antbk6vffgho3n7xehi6 (1).jpg')!!}")
+        $("#right-bottom img").attr("src","<?php echo asset('img/antbk6vffgho3n7xehi6 (1).jpg'); ?>")
         $("#right-bottom").fadeIn();
         $("#right-bottom .caption h3").html("Virtual Reality");
 
 
-         $("#left-bottom img").attr("src","{!!asset('img/apps-mobile-smartphone-ss-1920-800x450.jpg')!!}")
+         $("#left-bottom img").attr("src","<?php echo asset('img/apps-mobile-smartphone-ss-1920-800x450.jpg'); ?>")
         $("#left-bottom").fadeIn();
          $("#left-bottom .caption h3").html("Mobile Applications");
 
 
 
-        $("#center-top img").attr("src","{!!asset('img/how-to-write-seo-titles-2.jpg')!!}")
+        $("#center-top img").attr("src","<?php echo asset('img/how-to-write-seo-titles-2.jpg'); ?>")
         $("#center-top").fadeIn();
          $("#center-top .caption h3").html("SEO");
 
-          $("#center-bottom img").attr("src","{!!asset('img/Web-Hosting-Header-Image.png')!!}")
+          $("#center-bottom img").attr("src","<?php echo asset('img/Web-Hosting-Header-Image.png'); ?>")
          $("#center-bottom").fadeIn();
          $("#center-bottom .caption h3").html("Web Hosting");
     })
@@ -978,7 +976,7 @@ function displayCase()
 
 
            //custom
-         $("#right-top img").attr("src","{!!asset('img/Formation-VAD.jpg')!!}")
+         $("#right-top img").attr("src","<?php echo asset('img/Formation-VAD.jpg'); ?>")
         $("#right-top").fadeIn();
          $("#right-top .caption h3").html("Distance Selling");
 
@@ -988,7 +986,7 @@ function displayCase()
         
         $("#left-bottom").hide();
 
-        $("#center-top img").attr("src","{!!asset('img/Groupe-Le-Carre-commercial.jpg')!!}")
+        $("#center-top img").attr("src","<?php echo asset('img/Groupe-Le-Carre-commercial.jpg'); ?>")
         $("#center-top").fadeIn();
         $("#center-top .caption h3").html("Commercial");
 
@@ -1007,4 +1005,5 @@ function displayCase()
 
 
 
-@endsection('script')
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

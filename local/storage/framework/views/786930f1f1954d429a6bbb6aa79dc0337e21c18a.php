@@ -1,14 +1,13 @@
-@extends('layout.header')
-@section('style')
+<?php $__env->startSection('style'); ?>
 <link href="https://fonts.googleapis.com/css?family=Archivo+Black" rel="stylesheet">
-  <link href="  {!! asset('css/styleRDV.css') !!}" rel="stylesheet">
-  <link href="  {!! asset('css/styleFooter.css') !!}" rel="stylesheet">
+  <link href="  <?php echo asset('css/styleRDV.css'); ?>" rel="stylesheet">
+  <link href="  <?php echo asset('css/styleFooter.css'); ?>" rel="stylesheet">
   <style>
      
   </style>
-@endsection
-@section('content')
-@include('layout.contact')
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('content'); ?>
+<?php echo $__env->make('layout.contact', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
   <div class="bg">
 
@@ -20,7 +19,7 @@
                     background: rgba(28, 185, 200, 0.33);">
             </div>
 
-      <img src="{!! asset('/img/slide1.jpg') !!}" alt="" style="height: 500px;width:100%;margin-top:50px;">
+      <img src="<?php echo asset('/img/slide1.jpg'); ?>" alt="" style="height: 500px;width:100%;margin-top:50px;">
       <div class="caption">
          <h1 id="title" style="margin-top: 80px;font-size:60px;font-weight:bold"> Incoming calls
               <p style="font-size:20px;font-weight:400"> <span id="cptn">Your customer's satisfaction </span> Increases.</p>
@@ -58,15 +57,15 @@
           <div class="row">
                 <div class="nav-services col-md-4 col-sm-5">
                         <ul id="tab-services">
-                            <li class="serv-active"> <img src="{!!asset('img/flaticon/call-center-female-workers (2).png')!!}" alt=""> <span>Customer service </span></li>
-                            <li><img src="{!!asset('img/flaticon/call-center-female-workers (2).png')!!}" alt=""><span>Technical service (help desk)</span></li>
-                            <li><img src="{!!asset('img/online-customer-female-support.png')!!}" alt=""><span>Administrative Outsourcing</span></li>
+                            <li class="serv-active"> <img src="<?php echo asset('img/flaticon/call-center-female-workers (2).png'); ?>" alt=""> <span>Customer service </span></li>
+                            <li><img src="<?php echo asset('img/flaticon/call-center-female-workers (2).png'); ?>" alt=""><span>Technical service (help desk)</span></li>
+                            <li><img src="<?php echo asset('img/online-customer-female-support.png'); ?>" alt=""><span>Administrative Outsourcing</span></li>
                         </ul>
-                        <a class="btn btn-default btn-devis" target="_blank" href="{!! url('en/FreeQuote') !!}"><i class="fa fa-magic left" ></i> Free Quote</a>
+                        <a class="btn btn-default btn-devis" target="_blank" href="<?php echo url('en/FreeQuote'); ?>"><i class="fa fa-magic left" ></i> Free Quote</a>
                 </div>
                 <div class="services-info col-md-8 col-sm-7">
                     <div id="services1">
-                            <img src="{!!asset('img/flaticon/male-reporter.png')!!}" width="100px" alt="">
+                            <img src="<?php echo asset('img/flaticon/male-reporter.png'); ?>" width="100px" alt="">
                             <h2>Customer service</h2>
                                <p style="font-size: 15px;">The role of customer service is to provide the customer with the
 
@@ -98,7 +97,7 @@
                             <div class="clearfix"></div>
                     </div>
                       <div id="services2">
-                            <img src="{!!asset('img/flaticon/male-reporter.png')!!}" width="100px"  alt="">
+                            <img src="<?php echo asset('img/flaticon/male-reporter.png'); ?>" width="100px"  alt="">
                             <h2>Technical service (help desk)</h2>
                              <p style="font-size: 15px;">The role of the phone operator is to provide technical assistance for the
 
@@ -139,7 +138,7 @@
                             <div class="clearfix"></div>
                       </div>
                       <div id="services3">
-                            <img src="{!!asset('img/flaticon/male-reporter.png')!!}" width= "100px" alt="">
+                            <img src="<?php echo asset('img/flaticon/male-reporter.png'); ?>" width= "100px" alt="">
                             <h2>Administrative Outsourcing</h2>
                             <p  style="font-size: 15px;"> For your current Office management or secretariat, an outsourced assistant
 
@@ -186,12 +185,12 @@
   </div>
  
 
-@include('layout.footer')
-@endsection
+<?php echo $__env->make('layout.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php $__env->stopSection(); ?>
 
 
-@section('script')
-<script src="{!!asset('js/typed.min.js')!!}"> </script>
+<?php $__env->startSection('script'); ?>
+<script src="<?php echo asset('js/typed.min.js'); ?>"> </script>
 <script>
 
     $(document).ready(function(){
@@ -239,4 +238,5 @@
 
     }
 </script>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

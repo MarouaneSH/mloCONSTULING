@@ -118,7 +118,7 @@
          </div>
          <div class="col-md-3 col-sm-3 col-xs-12">
              <div class="single-service">
-                  <a href="{{route('vente')}}"><img src="{!!asset('img/televente.jpg')!!}" alt="" class="img-responsive">
+                  <a href="{{route('vente')}}"><img src="{!!asset('img/111.jpg')!!}" alt="" class="img-responsive">
                         <div class="service-content">
                         <h3>Télévente</h3>
                         <div class="services-desc">
@@ -137,16 +137,12 @@
          </div>
          <div class="col-md-3 col-sm-3 col-xs-12">
              <div class="single-service">
-                  <a href="{{route('webstore')}}"><img src="{!!asset('img/mobile-commerce10.jpg')!!}" alt="" class="img-responsive">
+                  <a href="{{route('formation')}}"><img src="{!!asset('img/televente.jpg')!!}" alt="" class="img-responsive">
                      <div class="service-content">
-                        <h3>Web to Store</h3>
+                        <h3>Réception d’appel</h3>
                         <div class="services-desc">
                                 <h5 style="line-height: 20px; font-family: Arial; text-align: center;    padding-right: 15px;">
-                                    Avec l’expansion d'internet, 
-                                    nous voyons tous les jours des activités se développer autour d'internet et d'applications internet.
-                                    Nous nous sommes adaptés pour vous !
-                                     Bonne connaissance des languages : PHP, Java, SQL, ASP. 
-                                     Bonne maîtrise des CMS
+                                   La réception d’appel est le fait de répondre aux appels entrants. C’est un service d’écoute mit à disposition des clients pour leurs demandes et leurs besoins. La réception d’appel se divise en deux catégories : le service consommateur (service client) et le service technique (help desk).
                                 </h5>
                             </div>
                         <span>MLO</span>
@@ -157,14 +153,16 @@
          </div>
          <div class="col-md-3 col-sm-3 col-xs-12">
              <div class="single-service">
-                  <a href="{{route('formation')}}"><img src="{!!asset('img/2128.jpg')!!}" alt="" class="img-responsive">
+                  <a href="{{route('webstore')}}"><img src="{!!asset('img/mobile-commerce10.jpg')!!}" alt="" class="img-responsive">
                         <div class="service-content">
-                            <h3>Formation professionnelle</h3>
+                            <h3>Web to Store</h3>
                             <div class="services-desc">
                                 <h5 style="line-height: 20px; font-family: Arial; text-align: center;    padding-right: 15px;">
-                                    Nous sommes des professionnels du Télémarketing et du commerce terrain.
-                                    Nous proposons des formations professionnelles dans ces domaines, depuis plusieurs années. 
-                                    Nos clients : Centres d'appel, Commerciaux Terrain, agence de communication... 
+                                     Avec l’expansion d'internet, 
+                                     nous voyons tous les jours des activités se développer autour d'internet et d'applications internet.
+                                     Nous nous sommes adaptés pour vous !
+                                     Bonne connaissance des languages : PHP, Java, SQL, ASP. 
+                                     Bonne maîtrise des CMS
                                 </h5>
                             </div>
                              

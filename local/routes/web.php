@@ -16,7 +16,7 @@ Route::get('/Televente-VAD',[
     'as' => 'vente'
 ]);
 
-Route::get('/formation-professionnelle',[
+Route::get('/Réception-appel',[
     'uses' => 'HomeController@formation',
     'as' => 'formation'
 ]);
@@ -52,6 +52,7 @@ Route::group(["prefix" => "Admin" ,"middleware" => "Admine"],function(){
     Route::post("Formation/addPaeiment","ApiController@addPaeiment")->name("addPaeiment");
     Route::get("Formation/Addmessage","ApiController@Addmessage")->name("Addmessage");
     Route::get('Formation/getPeimentCode',"ApiController@getPeimentCode")->name("getPaiement");
+    Route::get('Formation/removePaiement',"ApiController@removePaiement")->name("removePaiement");
     Route::get('Formation/getDemandeVerfication',"ApiController@getDemandeVerfication")->name("getDemandeVerfication");
     Route::get('Formation/Bibliotheque',"ApiController@postDocBiblio")->name("postDocBiblio");
     Route::get('Formation/Problems',"ApiController@Problems")->name("Problems");
@@ -116,7 +117,7 @@ Route::group(['prefix' => 'en' , "as" =>"en"], function () {
                 'as' => '-Telemarketing'
             ]);
 
-            Route::get('/Professional-Training',[
+            Route::get('/Incoming-calls',[
                 'uses' => 'HomeController@formationEN',
                 'as' => '-formation'
             ]);

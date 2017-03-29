@@ -96,6 +96,11 @@ class ApiController extends Controller
             "problems"=>$data
         ]);
     }
+    public function removePaiement(Request $request)
+    {
+          $data = file_get_contents('http://localhost:8000/api/RemovePaiementCode?key=MarouaneSH-api&id='.$request->id);
+          return $data;
+    }
 
     public function addPaeiment()
     {

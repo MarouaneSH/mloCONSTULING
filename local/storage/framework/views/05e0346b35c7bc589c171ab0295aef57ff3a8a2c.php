@@ -39,7 +39,7 @@
             </div>
             <div class="card">
                  <a href="<?php echo e(route('Problems')); ?>">
-                    <h5><i class="fa fa-check-circle" aria-hidden="true"></i></h5>
+                    <h5><i class="fa fa-exclamation" aria-hidden="true"></i></h5>
                     <h4>Report problem</h4>
                  </a>
             </div>
@@ -94,6 +94,7 @@
                 </div>
 
 <?php $__env->stopSection(); ?>
+
 
 <?php $__env->startSection('script'); ?>
 <script>
